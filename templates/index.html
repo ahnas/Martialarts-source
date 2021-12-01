@@ -1,0 +1,343 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MartialArts</title>
+
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap-5/bootstrap.min.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'assets/css/bootstrap-5/bootstrap-grid.min.css' %}"> -->
+    <!-- <link rel="stylesheet" href="{% static 'assets/css/bootstrap-5/bootstrap.css' %}"> -->
+    <!-- <link rel="stylesheet" href="{% static 'assets/css/bootstrap-5/bootstrap-utilities.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap-5/bootstrap-utilities.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap-5/bootstrap-grid.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap-5/bootstrap-grid.rtl.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap-5/"> -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+            <div class="container-fluid">
+                <!-- <a class="navbar-brand" href="#">Logo</a> -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav px-3">
+                        <li class="nav-item px-4 py-2">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item px-4 py-2">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item px-4 py-2">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+    </header>
+
+    <main class="mt-5">
+        <section class="banner-bg p-5 mt-3 banner-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 pb-4">
+                        <div class="head-title text-center py-3">
+                            <h1 class="">UNITED MARTIALARTS ACADEMY & BUDOKUN <span>KARETE ASSOCIATION</span> </h1>
+                        </div>
+
+                    </div>
+                    <div class="col-6 pb-4">
+                        <div class="card logo-one float-start">
+                            <img width="100%" src="{% static 'assets/images/png01-01.png' %}" class="card-img-top mx-auto" alt="...">
+
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card logo-one float-end">
+                            <img width="100%" src="{% static 'assets/images/png01-02.png' %}" class="card-img-top mx-auto" alt="...">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- --------------------AFFILIATION area start---------------------------- -->
+        <section class="py-5 area-2 banner-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="affiliation-title text-center py-3">
+                        <h2>AFFILIATION</h2>
+                    </div>
+                    <div class="col-12">
+                        <div class="afltn-abt text-center p-3">
+
+                            <p class="afltn-desc">
+                                United Martial Arts Academy International Nehru Yuva Kendra ,Ministry of Youth Affairs & sports Malappuram District Audio Association Malappuram District Wrestling Association District Wushu Association of Malappuram Youngmudo Association of Malappuram
+                            </p>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="area-3 py-5 banner-bg">
+            <div class="container">
+                <div class="row justify-content-center">
+
+                    {% for team in team %}
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-6">
+
+                        <div class="card card-box p-3 mt-4 p-sm-00 ">
+
+                            <img src="{{team.photo.crop.210x210}}" class="card-img-top" alt="...">
+                            <div class="card-body text-center">
+                                <h5 class="card-title ">{{team.name}}</h5>
+                                <p class="card-text">{{team.title}}</p>
+                                <p class="card-text">{{team.titletwo}}</p>
+                                <p class="card-text">{{team.titlethree}}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {% endfor %}
+                </div>
+            </div>
+
+        </section>
+
+        <section class="area-4 py-5 banner-bg">
+            <div class="container">
+
+                <div class="row justify-content-center">
+                    <div class="col-12 py-4">
+                        <div class="text-center">
+                            <h2>REFEREES</h2>
+                        </div>
+                    </div>
+
+                    {% for referee in referee %}
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-6 mt-4">
+                        <div class="card card-box p-3">
+                            <img src="{{referee.photo.crop.210x210}}" class="card-img-top" alt="...">
+                            <div class="card-body text-center">
+                                <h5 class="card-title ">{{referee.name}}</h5>
+                                <p class="card-text">{{referee.title}}</p>
+                                <p class="card-text">{{referee.titletwo}}</p>
+                                <p class="card-text">{{referee.titlethree}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="area-5 py-5 banner-bg">
+            <div class="container">
+
+                <div class="row justify-content-center">
+                    <div class="col-12 py-4">
+                        <div class="text-center">
+                            <h2>JUDGES</h2>
+                        </div>
+                    </div>
+
+                    {% for judge in judge %}
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-6 mt-4">
+                        <div class="card card-box p-3">
+                            <img src="{{judge.photo.crop.210x210}}" class="card-img-top" alt="...">
+                            <div class="card-body text-center">
+                                <h5 class="card-title ">{{judge.name}}</h5>
+                                <p class="card-text">{{judge.title}}</p>
+                                <p class="card-text">{{judge.titletwo}}</p>
+                                <p class="card-text">{{judge.titlethree}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <section class="area-6 py-5 banner-bg">
+            <div class="container">
+
+                <div class="row justify-content-center">
+                    <div class="col-12 py-4">
+                        <div class="text-center">
+                            <h2>EXAMINOR</h2>
+                        </div>
+                    </div>
+                    {% for examinar in examinar %}
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-6  mt-4">
+                        <div class="card card-box p-3">
+                            <img src="{{examinar.photo.crop.210x210}}" class="card-img-top" alt="...">
+                            <div class="card-body text-center">
+                                <h5 class="card-title ">{{examinar.name}}</h5>
+                                <p class="card-text">{{examinar.title}}</p>
+                                <p class="card-text">{{examinar.titletwo}}</p>
+                                <p class="card-text">{{examinar.titlethree}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <section class="area-7 py-5 banner-bg">
+            <div class="container">
+
+                <div class="row justify-content-center">
+                    <div class="col-12 py-4">
+                        <div class="text-center">
+                            <h2>AUTHORISED & INSTRACTORS</h2>
+                        </div>
+                    </div>
+                    {% for author in author %}
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-6 mt-4">
+                        <div class="card card-box p-3">
+                            <img src="{{author.photo.crop.210x210}}" class="card-img-top" alt="...">
+                            <div class="card-body text-center">
+                                <h5 class="card-title ">{{author.name}}</h5>
+                                <p class="card-text">{{author.title}}</p>
+                                <p class="card-text">{{author.titletwo}}</p>
+                                <p class="card-text">{{author.titlethree}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+
+                </div>
+            </div>
+        </section>
+
+        <section class="area-8 py-5 banner-bg">
+            <div class="container">
+                <div class="row contacttt">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                        <div class="row p-3">
+                            <div class="col-2 p-3 ">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="col-10 p-3">
+                                <p>
+                                    <a href="">919876543210</a>
+                                </p>
+                            </div>
+
+                            <div class="col-2 p-3 ">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="col-10 p-3">
+                                <p>
+                                    <a href="">demo@gmail.com</a>
+                                </p>
+                            </div>
+                            <div class="col-2 p-3 ">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="col-10 p-3">
+                                <p>
+                                    Oorkadavu , Areekode - Vazhakkad Road, 673640 PIN
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                        <div class="map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.1601438326284!2d75.83815391412007!3d11.249627253358533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65ba2ab239dc1%3A0xd26940be214145ce!2sUnited%20Martial%20Art%20Academy%20International!5e0!3m2!1sen!2sin!4v1637427477724!5m2!1sen!2sin"
+                                style="width: 100%; height: 450px; object-fit: contain;"></iframe>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-bg p-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-6">
+                    <div class="quick-links text-center">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li class="p-3">
+                                <a href="#">Home</a>
+                            </li>
+                            <li class="p-3"> <a href="#">About</a></li>
+                            <li class="p-3"> <a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-6">
+                    <div class="quick-links text-center">
+                        <h4>Quick Links</h4>
+                        <ul class="">
+                            <li class="p-3">
+                                <a href="#">REFEREES</a>
+                            </li>
+                            <li class="p-3"> <a href="#">JUDGES</a></li>
+                            <li class="p-3"> <a href="#">EXAMINOR</a></li>
+                            <li class="p-3"> <a href="#">AUTHORISED & INSTRACTORS</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+                    <div class="ft-abt text-center">
+                        <h4>About</h4>
+                    </div>
+                    <ul>
+                        <li class="p-3">
+                            <p> <span class="fas fa-map-marker-alt"></span> Oorkadavu ,Areekode - Vazhakkad Road 673640 PIN</p>
+                        </li>
+                        <li class="p-3">
+                            <span class="fa fa-phone"></span> <a href="">919876543210</a>
+                        </li>
+                    </ul>
+                    <ul class="d-flex">
+                        <li class="p-3">
+                            <a href=""> <i class="fab fa-facebook"></i> </a>
+                        </li>
+                        <li class="p-3">
+                            <a href=""> <i class="fab fa-instagram"></i> </a>
+
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- <div class="col-12 text-center">
+                    <p>Copyright 2022 | Design by <a href=""></a></p>
+                </div> -->
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="{% static 'assets/js/bootstrap5/bootstrap.min.js' %}"></script>
+
+
+</body>
+
+</html>

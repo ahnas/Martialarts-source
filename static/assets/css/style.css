@@ -1,0 +1,104 @@
+body {
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    background-color: #fff;
+}
+
+
+.contacttt .p-5{
+    
+    align-items: center;
+}
+/* ----------------navbar---------------- */
+.bg-dark {
+    background-color: #84aed6 !important;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(17, 17, 17, 0.55);
+    font-weight: 500;
+}
+
+.banner-bg {
+    background: linear-gradient(#e9f2fa, white);
+}
+.head-title h1 {
+    font-size: 3rem;
+    color: #202278 !important;
+    font-weight: 700;
+}
+.logo-one {
+    max-width: 50%;
+    object-fit: contain;
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: transparent;
+    background-clip: border-box;
+    border: none;
+    border-radius: 0.25rem;
+}
+.afltn-desc {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 55px;
+    padding: 40px 0;
+}
+.card-box {
+    background-color: #e9f2fa;
+}
+
+/* ----------contact section------------------------ */
+.area-8 .fa-phone:before {
+    content: "\f095";
+    font-size: 30px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background: dodgerblue;
+    border-radius: 50px;
+}
+.area-8 .fa-envelope:before {
+    font-size: 30px;
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    padding: 10px;
+    background: dodgerblue;
+    border-radius: 50px;
+
+}
+.area-8 .fa-map-marker-alt:before {
+    font-size: 30px;
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    padding: 10px;
+    background: dodgerblue;
+    border-radius: 90%;
+    width: 50px;
+
+}
+.area-8 a {
+    color: #000;
+}
+/* --------footer section------------ */
+.footer-bg {
+    background-color: #77aad9;
+    color: #fff;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+.quick-links li {
+    
+}
