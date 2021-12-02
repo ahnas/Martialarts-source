@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MartialArts</title>
 
+    <link href="{% static 'assets/images/png01-02.png' %}" rel="icon">
+
     <link rel="stylesheet" href="{% static 'assets/css/bootstrap-5/bootstrap.min.css' %}">
     <!-- <link rel="stylesheet" href="{% static 'assets/css/bootstrap-5/bootstrap-grid.min.css' %}"> -->
     <!-- <link rel="stylesheet" href="{% static 'assets/css/bootstrap-5/bootstrap.css' %}"> -->
@@ -34,13 +36,20 @@
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul class="navbar-nav px-3">
                         <li class="nav-item px-4 py-2">
-                            <a class="nav-link" href="#">Home</a>
+                            <a href="{% url 'web:index' %}" class="nav-link">Home</a>
                         </li>
                         <li class="nav-item px-4 py-2">
-                            <a class="nav-link" href="#">About</a>
+                            <a href="{% url 'web:about' %}" class="nav-link">About</a>
                         </li>
+
+
+
                         <li class="nav-item px-4 py-2">
-                            <a class="nav-link" href="#">Contact</a>
+                            <a href="{% url 'web:gallery' %}" class="nav-link">Gallery</a>
+                        </li>
+
+                        <li class="nav-item px-4 py-2">
+                            <a href="{% url 'web:contact' %}" class="nav-link">Contact</a>
                         </li>
 
                     </ul>
@@ -86,9 +95,11 @@
                     <div class="col-12">
                         <div class="afltn-abt text-center p-3">
 
+                            {% for affiliation in affiliation %}
                             <p class="afltn-desc">
-                                United Martial Arts Academy International Nehru Yuva Kendra ,Ministry of Youth Affairs & sports Malappuram District Audio Association Malappuram District Wrestling Association District Wushu Association of Malappuram Youngmudo Association of Malappuram
+                                {{affiliation.content}}
                             </p>
+                            {% endfor %}
 
                         </div>
 
@@ -100,11 +111,10 @@
         <section class="area-3 py-5 banner-bg">
             <div class="container">
                 <div class="row justify-content-center">
-
                     {% for team in team %}
                     <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-
                         <div class="card card-box p-3 mt-4 p-sm-00 ">
+                            <h4 class="text-center">{{team.headname}}</h4>
 
                             <img src="{{team.photo.crop.210x210}}" class="card-img-top" alt="...">
                             <div class="card-body text-center">
@@ -232,6 +242,38 @@
             </div>
         </section>
 
+
+
+
+        <section class="area-7 py-5 banner-bg">
+            <div class="container">
+
+                <div class="row justify-content-center">
+                    <div class="col-12 py-4">
+                        <div class="text-center">
+                            <h2>Black Belt</h2>
+                        </div>
+                    </div>
+                    {% for blackbelt in blackbelt %}
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-6 mt-4">
+                        <div class="card card-box p-3">
+                            <img src="{{blackbelt.photo.crop.210x210}}" class="card-img-top" alt="...">
+                            <div class="card-body text-center">
+                                <h5 class="card-title ">{{blackbelt.name}}</h5>
+                                <p class="card-text">{{blackbelt.title}}</p>
+                                <p class="card-text">{{blackbelt.titletwo}}</p>
+                                <p class="card-text">{{blackbelt.titlethree}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+
+                </div>
+            </div>
+        </section>
+
+
         <section class="area-8 py-5 banner-bg">
             <div class="container">
                 <div class="row contacttt">
@@ -266,8 +308,8 @@
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                         <div class="map">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.1601438326284!2d75.83815391412007!3d11.249627253358533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65ba2ab239dc1%3A0xd26940be214145ce!2sUnited%20Martial%20Art%20Academy%20International!5e0!3m2!1sen!2sin!4v1637427477724!5m2!1sen!2sin"
-                                style="width: 100%; height: 450px; object-fit: contain;"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.2515078138813!2d75.92594111480494!3d11.242899792006044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba645594f769a89%3A0x8669a3410fdb5fc3!2sUNITED%20MARTIAL%20ARTS%20ACADEMY%20%26%20BUDOKAN%20KARATE%20ASSOCIATION%20OORKKADAVU%20-%20DOJO!5e0!3m2!1sen!2sin!4v1638357301324!5m2!1sen!2sin"
+                                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
                         </div>
                     </div>

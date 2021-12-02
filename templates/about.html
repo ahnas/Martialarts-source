@@ -1,0 +1,159 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MartialArts | About</title>
+
+    <link href="{% static 'assets/images/png01-02.png' %}" rel="icon">
+
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap-5/bootstrap.min.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'assets/css/bootstrap-5/bootstrap-grid.min.css' %}"> -->
+    <!-- <link rel="stylesheet" href="{% static 'assets/css/bootstrap-5/bootstrap.css' %}"> -->
+    <!-- <link rel="stylesheet" href="{% static 'assets/css/bootstrap-5/bootstrap-utilities.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap-5/bootstrap-utilities.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap-5/bootstrap-grid.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap-5/bootstrap-grid.rtl.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap-5/"> -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+            <div class="container-fluid">
+                <!-- <a class="navbar-brand" href="#">Logo</a> -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav px-3">
+                        <li class="nav-item px-4 py-2">
+                            <a href="{% url 'web:index' %}" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item px-4 py-2">
+                            <a href="{% url 'web:about' %}" class="nav-link">About</a>
+                        </li>
+
+
+
+                        <li class="nav-item px-4 py-2">
+                            <a href="{% url 'web:gallery' %}" class="nav-link">Gallery</a>
+                        </li>
+
+                        <li class="nav-item px-4 py-2">
+                            <a href="{% url 'web:contact' %}" class="nav-link">Contact</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+    </header>
+
+
+    <main class="mt-5">
+
+        <!-- --------------------AFFILIATION area start---------------------------- -->
+        <section class="py-5 area-2 banner-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="affiliation-title text-center py-3">
+                        <h2>About Us</h2>
+                    </div>
+                    <div class="col-12">
+                        <div class="afltn-abt text-center p-3">
+
+
+                            <p class="afltn-desc">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quod harum repellat distinctio reprehenderit enim asperiores libero dignissimos, sint nihil soluta tempora eligendi qui non hic ad repudiandae aspernatur tenetur!
+                            </p>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+    </main>
+
+    <footer class="footer-bg p-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-6">
+                    <div class="quick-links text-center">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li class="p-3">
+                                <a href="#">Home</a>
+                            </li>
+                            <li class="p-3"> <a href="#">About</a></li>
+                            <li class="p-3"> <a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-6">
+                    <div class="quick-links text-center">
+                        <h4>Quick Links</h4>
+                        <ul class="">
+                            <li class="p-3">
+                                <a href="#">REFEREES</a>
+                            </li>
+                            <li class="p-3"> <a href="#">JUDGES</a></li>
+                            <li class="p-3"> <a href="#">EXAMINOR</a></li>
+                            <li class="p-3"> <a href="#">AUTHORISED & INSTRACTORS</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+                    <div class="ft-abt text-center">
+                        <h4>About</h4>
+                    </div>
+                    <ul>
+                        <li class="p-3">
+                            <p> <span class="fas fa-map-marker-alt"></span> Oorkadavu ,Areekode - Vazhakkad Road 673640 PIN</p>
+                        </li>
+                        <li class="p-3">
+                            <span class="fa fa-phone"></span> <a href="">919876543210</a>
+                        </li>
+                    </ul>
+                    <ul class="d-flex">
+                        <li class="p-3">
+                            <a href=""> <i class="fab fa-facebook"></i> </a>
+                        </li>
+                        <li class="p-3">
+                            <a href=""> <i class="fab fa-instagram"></i> </a>
+
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- <div class="col-12 text-center">
+                    <p>Copyright 2022 | Design by <a href=""></a></p>
+                </div> -->
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="{% static 'assets/js/bootstrap5/bootstrap.min.js' %}"></script>
+
+
+</body>
+
+</html>

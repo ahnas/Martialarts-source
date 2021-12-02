@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MartialArts | Contact</title>
+    <title>MartialArts | Gallery</title>
 
     <link href="{% static 'assets/images/png01-02.png' %}" rel="icon">
 
@@ -65,23 +65,14 @@
         <!-- --------------------AFFILIATION area start---------------------------- -->
         <section class="py-5 area-2 banner-bg">
             <div class="container">
-                <div class="row text-center">
+                <div class="row text-center justify-content-center">
                     <div class="affiliation-title text-center py-3">
-                        <h2>Contact</h2>
+                        <h2>Gallery</h2>
                     </div>
 
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-12 mb-3">
-                        Call : <a class="text-danger" href="tel:+919876543210">9876543210</a>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                        <div class="map">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.2515078138813!2d75.92594111480494!3d11.242899792006044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba645594f769a89%3A0x8669a3410fdb5fc3!2sUNITED%20MARTIAL%20ARTS%20ACADEMY%20%26%20BUDOKAN%20KARATE%20ASSOCIATION%20OORKKADAVU%20-%20DOJO!5e0!3m2!1sen!2sin!4v1638357301324!5m2!1sen!2sin"
-                                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
-                        </div>
-                    </div>
-
-
+                    {% for gallery in gallery %}
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-6 p-2"><img class="" width="100%" src="{{gallery.photo.crop.500x350}}" alt=""></div>
+                    {% endfor %}
                 </div>
             </div>
         </section>
