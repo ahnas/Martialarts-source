@@ -96,7 +96,7 @@
                         <div class="afltn-abt text-center p-3">
 
                             {% for affiliation in affiliation %}
-                            <p class="afltn-desc">
+                            <p class="afltn-desc" style="text-align: inherit;">
                                 {{affiliation.content}}
                             </p>
                             {% endfor %}
@@ -121,6 +121,7 @@
                                 <p class="card-text">{{team.title}}</p>
                                 <p class="card-text">{{team.titletwo}}</p>
                                 <p class="card-text">{{team.titlethree}}</p>
+                                {% if team.titleFour %}<p class="card-text">{{team.titleFour}}</p>{% endif %}
                             </div>
                         </div>
                     </div>
@@ -150,6 +151,7 @@
                                 <p class="card-text">{{referee.title}}</p>
                                 <p class="card-text">{{referee.titletwo}}</p>
                                 <p class="card-text">{{referee.titlethree}}</p>
+                                {% if team.titleFour %}<p class="card-text">{{referee.titleFour}}</p>{% endif %}
                             </div>
                         </div>
                     </div>
@@ -179,6 +181,7 @@
                                 <p class="card-text">{{judge.title}}</p>
                                 <p class="card-text">{{judge.titletwo}}</p>
                                 <p class="card-text">{{judge.titlethree}}</p>
+                                {% if team.titleFour %}<p class="card-text">{{judge.titleFour}}</p>{% endif %}
                             </div>
                         </div>
                     </div>
@@ -205,6 +208,7 @@
                                 <p class="card-text">{{examinar.title}}</p>
                                 <p class="card-text">{{examinar.titletwo}}</p>
                                 <p class="card-text">{{examinar.titlethree}}</p>
+                                {% if team.titleFour %}<p class="card-text">{{examinar.titleFour}}</p>{% endif %}
                             </div>
                         </div>
                     </div>
@@ -231,6 +235,7 @@
                                 <p class="card-text">{{author.title}}</p>
                                 <p class="card-text">{{author.titletwo}}</p>
                                 <p class="card-text">{{author.titlethree}}</p>
+                                {% if team.titleFour %}<p class="card-text">{{author.titleFour}}</p>{% endif %}
                             </div>
                         </div>
                     </div>
@@ -262,6 +267,7 @@
                                 <p class="card-text">{{blackbelt.title}}</p>
                                 <p class="card-text">{{blackbelt.titletwo}}</p>
                                 <p class="card-text">{{blackbelt.titlethree}}</p>
+                                {% if team.titleFour %}<p class="card-text">{{blackbelt.titleFour}}</p>{% endif %}
                             </div>
                         </div>
                     </div>

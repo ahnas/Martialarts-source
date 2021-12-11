@@ -19,6 +19,7 @@ class Team(models.Model):
     title = models.CharField(max_length=128,blank=True,null=True)
     titletwo = models.CharField(max_length=128,blank=True,null=True)
     titlethree = models.CharField(max_length=128,blank=True,null=True)
+    titleFour = models.CharField(max_length=128,blank=True,null=True)
 
     def __str__(self):
         return str(self.name)
@@ -32,6 +33,8 @@ class Referee(models.Model):
     title = models.CharField(max_length=128,blank=True,null=True)
     titletwo = models.CharField(max_length=128,blank=True,null=True)
     titlethree = models.CharField(max_length=128,blank=True,null=True)
+    titleFour = models.CharField(max_length=128,blank=True,null=True)
+
 
     def __str__(self):
         return str(self.name)
@@ -45,6 +48,8 @@ class Judge(models.Model):
     title = models.CharField(max_length=128,blank=True,null=True)
     titletwo = models.CharField(max_length=128,blank=True,null=True)
     titlethree = models.CharField(max_length=128,blank=True,null=True)
+    titleFour = models.CharField(max_length=128,blank=True,null=True)
+
 
     def __str__(self):
         return str(self.name)
@@ -56,6 +61,8 @@ class Examinar(models.Model):
     title = models.CharField(max_length=128,blank=True,null=True)
     titletwo = models.CharField(max_length=128,blank=True,null=True)
     titlethree = models.CharField(max_length=128,blank=True,null=True)
+    titleFour = models.CharField(max_length=128,blank=True,null=True)
+
 
     def __str__(self):
         return str(self.name)
@@ -67,6 +74,8 @@ class Author(models.Model):
     title = models.CharField(max_length=128,blank=True,null=True)
     titletwo = models.CharField(max_length=128,blank=True,null=True)
     titlethree = models.CharField(max_length=128,blank=True,null=True)
+    titleFour = models.CharField(max_length=128,blank=True,null=True)
+
 
     def __str__(self):
         return str(self.name)
